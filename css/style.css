@@ -459,4 +459,19 @@ header {
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
+    position: relative;
+}
+
+.multiverse_link, .countdupe_link, .sameends_link{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.myworkimg {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
 }
