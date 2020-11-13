@@ -386,7 +386,7 @@ header {
 .portfolio__item, .portfolio__item1, .portfolio__item2,
  .portfolio__item3, .portfolio__item4, .portfolio__item5,
   .portfolio__item6, .portfolio__item7, .portfolio__item8{
-    background: var(--clr-accent);
+    background: var(--clr-light);
     overflow: hidden;
 }
 
@@ -478,4 +478,16 @@ header {
     margin-left: auto;
     margin-right: auto;
     width: 50%;
+}
+
+body::-webkit-scrollbar{
+    width: 0.75rem;
+}
+
+body::-webkit-scrollbar-track{
+    background: #00AFFB;
+}
+
+body::-webkit-scrollbar-thumb{
+    background: #FE0000;
 }
