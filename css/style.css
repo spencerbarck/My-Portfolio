@@ -385,7 +385,7 @@ header {
 
 .portfolio__item, .portfolio__item1, .portfolio__item2,
  .portfolio__item3, .portfolio__item4, .portfolio__item5,
-  .portfolio__item6, .portfolio__item7, .portfolio__item8{
+  .portfolio__item6, .portfolio__item7, .portfolio__item8, .portfolio__item9{
     background: var(--clr-light);
     overflow: hidden;
 }
