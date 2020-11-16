@@ -49,6 +49,7 @@ body {
     font-family: var(--ff-primary);
     font-size: var(--fs-body);
     line-height: 1.6;
+    
 }
 
 section {
@@ -60,7 +61,35 @@ img {
     max-width: 100%;
 }
 
-strong { font-weight: var(--fw-bold) }
+strong { 
+    font-weight: var(--fw-bold);
+    
+    background: linear-gradient(270deg,#FE0000,#ffffff);
+    background-size: 400% 400%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline;
+
+    -webkit-animation: AnimationWebKit 3s 1;
+    -moz-animation: AnimationMoz 3s 1;
+    animation: AnimationPulse 3s 1;
+}
+
+@-webkit-keyframes AnimationWebKit {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes AnimationMoz {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes AnimationPulse {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
 
 :focus {
     outline: 3px solid var(--clr-accent);
@@ -490,4 +519,9 @@ body::-webkit-scrollbar-track{
 
 body::-webkit-scrollbar-thumb{
     background: #FE0000;
+}
+
+*::selection {
+    background: var(--clr-accent);
+    color: var(--clr-light);
 }
