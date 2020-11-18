@@ -7,55 +7,46 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />  
         
+        <link rel="stylesheet" href="jquery-ui.css">
+        <script src="jquery.js"></script>
+        <script src="jquery-ui.js"></script>
+
         <!--fonts -->
         <!--<link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap" rel="stylesheet">-->
         <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@300;400;700&display=swap" rel="stylesheet">
         
         <link rel="stylesheet" href="css/style.css">
 
+        <script>
+            $(document).ready(function(){
+                $("#projects").tabs();
+                $("ul").sortable({axis:"x",containment:"#projects"});
+                $("ol").sortable({axis:"y",containment:"#projects"});
+            });
+        </script>
     </head>
     <body>
-        <header>
-            <div class="logo">
-                <img src="img/devjane.png" alt="">
-            </div>
-            <button class="nav-toggle" aria-label="toggle navigation">
-                <span class="hamburger"></span>
-            </button>
-            <nav class="nav">
-                <ul class="nav__list">
-                    <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
-                    <li class="nav__item"><a href="index.html#services" class="nav__link">My Services</a></li>
-                    <li class="nav__item"><a href="index.html#about" class="nav__link">About me</a></li>
-                    <li class="nav__item"><a href="index.html#work" class="nav__link">My Work</a></li>
-                </ul>
-            </nav>
-        </header>
-        
 
-        <section class="intro">
-            <h1 class="section__title section__title--intro3">
-                Find <strong>Kaprekar</strong>
-            </h1>
-            <p class="section__subtitle section__subtitle--intro">A java and swing program</p>
-            <img src="img/portfolio-09.jpg" alt="" class="intro__img">
-        </section> 
-        
-        
-        <div class="portfolio-item-individual">
-            <p>The Find Kaprekar app allows the user to enter an integer and find all the Kaprekar numbers that occur 
-                before that integer. A Kaprekar number is a number where if you square the number, then split the 
-                squared value into two numbers, you can add those numbers and get the original number. For instance 45^2 = 2025 
-                and 20+25=45 therefore 45 is a Kaprekar number.</p>
-            <img class="myworkimg" src="img/portfolio-09.jpg" alt="">
-            <p>I decided to give the app a little more functionality. The user can check the Find X Kaprekars box to find the 
-                first X Kaprekars starting from 1. I also added a section at the bottom where the user can enter a number and 
-                find out if that number is a Kaprekar number.</p>
-            <a class="calculator_link" href="downloads/FindKaprekars.zip" download>
-                Download Find Kaprekar
-            </a>
+        <div id = "container">
+            <h2><strong>To Do List</strong></h2>
+            <div id="projects">
+                <ul id="main">
+                    <li>
+                        <a href="#personal">Personal</a>
+                        <a href="#work">Work</a>
+                    </li>
+                    <ol id="personal">
+                        <li><input type="checkbox">Empty Dishwasher</li>
+                        <li><input type="checkbox">Brush Teeth</li>
+                    </ol>
+                    <ol id="work">
+                        <li><input type="checkbox">Send Daily Emails</li>
+                        <li><input type="checkbox">Check Tickets</li>
+                    </ol>
+                </ul>
+            </div>
+
         </div>
-        
         <!-- Footer -->
     <footer class="footer">
         <a href="mailto:spencerbarck@gmail.com" class="footer__link">
@@ -90,7 +81,6 @@
 
         </ul>
     </footer>
-        
         
         <script src="js/index.js"></script>
         

@@ -43,13 +43,24 @@ html {
 }
 
 body {
-    background: var(--clr-light);
+    /*background: var(--clr-light);*/
+
+    background: linear-gradient(225deg,#00AFFB,#316d86);
+    background-size: 400% 400%;
+
+    animation: AnimationPulseBackground 20s ease infinite;
+    
+
     color: var(--clr-dark);
     margin: 0;
     font-family: var(--ff-primary);
     font-size: var(--fs-body);
     line-height: 1.6;
-    
+}
+@keyframes AnimationPulseBackground {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
 }
 
 section {
@@ -64,31 +75,19 @@ img {
 strong { 
     font-weight: var(--fw-bold);
     
-    background: linear-gradient(270deg,#FE0000,#ffffff);
+    background: linear-gradient(#FE0000,#00AFFB,#ffe679);
     background-size: 400% 400%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     display: inline;
 
-    -webkit-animation: AnimationWebKit 3s 1;
-    -moz-animation: AnimationMoz 3s 1;
-    animation: AnimationPulse 3s 1;
+    animation: AnimationPulseName 3s 1;
 }
 
-@-webkit-keyframes AnimationWebKit {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
-}
-@-moz-keyframes AnimationMoz {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
-}
-@keyframes AnimationPulse {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
+@keyframes AnimationPulseName {
+    0%{background-position:50% 0%}
+    50%{background-position:50% 100%}
+    100%{background-position:50% 0%}
 }
 
 :focus {
@@ -414,7 +413,7 @@ header {
 
 .portfolio__item, .portfolio__item1, .portfolio__item2,
  .portfolio__item3, .portfolio__item4, .portfolio__item5,
-  .portfolio__item6, .portfolio__item7, .portfolio__item8, .portfolio__item9{
+  .portfolio__item6, .portfolio__item7, .portfolio__item8, .portfolio__item9, .portfolio__item10{
     background: var(--clr-light);
     overflow: hidden;
 }
@@ -442,6 +441,8 @@ header {
     text-align: center;
     padding: 2.5em 0;
     font-size: var(--fs-h3);
+
+    clip-path: polygon(20% 0, 80% 0, 100% 30%, 100% 70%, 50% 100%, 50% 100%, 0% 70%, 0% 30%);
 }
 
 .footer a { 

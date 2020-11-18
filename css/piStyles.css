@@ -1,0 +1,171 @@
+html {
+    scroll-behavior: smooth;
+    max-width: 100%;
+    overflow-x: hidden;
+
+    font-family: 'Cinzel', serif;
+}
+
+#gradiant {
+    background: linear-gradient(to right,#005275,#00AFFB,#005275);
+}
+
+#options {
+    background: linear-gradient(to right,#005275,#00AFFB,#005275);
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -1em;
+    height: 3em;
+    width: 100%;
+    z-index: 100;
+}
+
+#piePrinted {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+p {
+    padding: 0;
+    margin: 0;
+}
+
+h2{
+    text-align:center;
+    font-size: 100px;
+    margin-top: .1em;
+    margin-bottom: 0;
+    background: linear-gradient(to right,#005275,#00AFFB,#005275);
+}
+
+h3{
+    text-align:center;
+    font-size: 100px;
+    margin-top: 0;
+    height: 1.45em;
+    margin-bottom: -10em;
+    background: linear-gradient(to right,#005275,#00AFFB,#005275);
+}
+
+label {
+    margin-right: 1em;
+}
+
+input {
+    margin-right: 1em ;
+}
+
+button {
+    margin-right: 2em;
+}
+
+#tester {
+    font-size: medium;
+    margin-right: 2em;
+}
+
+#nine,#eight,#seven,#six,#five,#four,#three,#two,#one,#zero,#dot{
+    font-size: 100px;
+}
+
+#last {
+    justify-content: center;
+}
+
+#nine {
+    color: #800000;
+}
+
+#eight {
+    color: #e6194B;
+}
+
+#seven {
+    color: #9A6324;
+}
+
+#six {
+    color: #f58231;
+}
+
+#five {
+    color: #808000;
+}
+
+#four {
+    color: #ffe119;
+}
+
+#three {
+    color: #bfef45;
+}
+
+#two {
+    color: #469990;
+}
+
+#one {
+    color: #4363d8;
+}
+
+#zero {
+    color: #911eb4;
+}
+
+.btn {
+    display: inline-block;
+    padding: .5em 2.5em;
+    background: var( #ffffff);
+    text-decoration: none;
+    cursor: pointer;
+    font-size: .8rem;
+    text-transform: uppercase;
+    letter-spacing: 2.px;
+    font-weight: var(--fw-bold);
+    transition: transform 200ms ease-in-out;
+}
+
+#container {
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+    width: 100%;
+    margin-left: -0.5em;
+    margin-right: -0.5em;
+}
+
+body {
+    width: 100%;
+}
+
+#spacerDiv {
+    background: linear-gradient(270deg,#000000,#ffffff,#000000);   
+ 
+    position: relative;
+    height: 26.5em;
+    width: 100%;
+    z-index: -1;
+    margin: 0;
+}
+
+#piePrinted {
+    font-family: sans-serif;
+    background: linear-gradient(270deg,#000000,#ffffff,#000000);
+    height: 100%;
+}
+
+body::-webkit-scrollbar{
+    width: 1rem;
+    /*-webkit-appearance: none;*/
+}
+
+body::-webkit-scrollbar-track{
+    background:#00AFFB;
+}
+
+body::-webkit-scrollbar-thumb{
+    background:#005275;
+}
