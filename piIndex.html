@@ -26,6 +26,15 @@
 
                 $("#projects").toggle();
 
+                $("#btn4").on('click',function(){
+
+                    document.getElementById("reachedEnd").scrollIntoView({
+                        behavior: 'auto',
+                        block: 'center',
+                        inline: 'center'
+                    });
+                });
+
                 $("#btn3").on('click',function(){
 
                     document.getElementById("thisIsPi").scrollIntoView({
@@ -161,6 +170,8 @@
                     <button id = btn2> Jump to Index</button>
 
                     <button id = btn3> Jump to Top</button>
+
+                    <button id = btn4> Jump to Bottom</button>
                 </div>
                 <h2 id = "thisIsPi"><strong>This is Pi</strong></h2>
             </div>
@@ -174,7 +185,7 @@
                     </div>
                 </div>
             </section>
-            <h3><strong>You have reached the end</strong></h3>
+            <h3 id = "reachedEnd"><strong>You have reached the end</strong></h3>
         </div>
         
     </body>
