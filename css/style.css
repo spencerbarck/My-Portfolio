@@ -134,10 +134,12 @@ h3 { font-size: var(--fs-h3) }
 
 .section__title--intro {
     font-weight: var(--fw-reg);
+    text-shadow: 3px 3px #000000;
 }
 
 .section__title--intro strong {
     display: block;
+    text-shadow: none;
 }
 
 .section__subtitle {
@@ -151,6 +153,7 @@ h3 { font-size: var(--fs-h3) }
     padding: .25em 1em;
     font-family: var(--ff-secondary);
     margin-bottom: 1em;
+    text-shadow: 2px 2px #000000;
 }
 
 .section__subtitle--work {
@@ -323,6 +326,10 @@ header {
 .section__title--services {
     color: var(--clr-accent);
     position: relative;
+    background: url(https://media1.giphy.com/media/5vidmSHUsyoybSYNN0/giphy.gif?cid=ecf05e47i1kvxh1rz71h220ggw9qthmmtyyufo1cj6farzlo&rid=giphy.gif);
+    background-size: 10%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .section__title--services::after {
@@ -357,6 +364,14 @@ header {
     }
 }
 
+.minneapolis {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    filter: saturate(125%)
+}
+
 .about-me {
     max-width: 1000px;
     margin: 0 auto;
@@ -375,6 +390,7 @@ header {
             "subtitle img"
             "text img";
         grid-column-gap: 2em;
+        text-shadow: 2px 2px #000000;
     }
 
     .section__title--about {
@@ -399,6 +415,13 @@ header {
 }
 
 /* My Work */
+.section__title--work{
+    text-shadow: 2px 2px #000000;
+}
+
+.section__subtitle--work {
+    text-shadow: 1px 1px #000000;
+}
 
 .my-work {
     background-color: var(--clr-dark);

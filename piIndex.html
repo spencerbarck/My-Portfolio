@@ -22,7 +22,65 @@
 
             var pString = "";
 
+            var zeroCount = 0;
+                    var oneCount = 0;
+                    var twoCount = 0;
+                    var threeCount = 0;
+                    var fourCount = 0;
+                    var fiveCount = 0;
+                    var sixCount = 0;
+                    var sevenCount = 0;
+                    var eightCount = 0;
+                    var nineCount = 0;
+
             $(document).ready(function(){
+
+                $("#projects").on("mouseover",'p:even', function(){
+
+                    var occNum;
+                    switch($(this).text()){
+                    case '0':{ occNum=zeroCount;
+                                break;
+                            }
+                            case '1':{ occNum=oneCount;
+                                break;
+                            }
+                            case '2':{ occNum=twoCount;
+                                break;
+                            }
+                            case '3':{ occNum=threeCount;
+                                break;
+                            }
+                            case '4':{ occNum=fourCount;
+                                break;
+                            }
+                            case '5':{ occNum=fiveCount;
+                                break;
+                            }
+                            case '6':{ occNum=sixCount;
+                                break;
+                            }
+                            case '7':{ occNum=sevenCount;
+                                break;
+                            }
+                            case '8':{ occNum=eightCount;
+                                break;
+                            }
+                            case '9':{ occNum=nineCount;
+                                break;
+                            }
+                            case '.':{ occNum=1;
+                                break;
+                            }
+                    }
+                    var occString = occNum+" occurences";
+
+                    $("h1").text(occString);
+
+                    $(this).addClass('animate');
+                }).on("animationend", function(){
+                        $(this).removeClass('animate');
+                });
 
                 $("#projects").toggle();
 
@@ -55,6 +113,7 @@
                     });
                 });
 
+                //make pie button
                 $("#btn1").on('click',function(){
 
                     $("#projects").empty();
@@ -66,18 +125,6 @@
 
                     var firstIndexID = "<p id = 'index1'>1</p>";
                     $("#projects").append(firstIndexID);
-
-                    var zeroCount = 0;
-                    var oneCount = 0;
-                    var twoCound = 0;
-                    var threeCount = 0;
-                    var fourCount = 0;
-                    var fiveCount = 0;
-                    var sixCount = 0;
-                    var sevenCount = 0;
-                    var eightCount = 0;
-                    var nineCount = 0;
-
 
                     if(end!=1)end++;
                     for(i=0;i<end;i++){
@@ -98,7 +145,7 @@
                                 break;
                             }
                             case '2':{ var entry = $("<p id = 'two'></p>").text(num);
-                                twoCound++;
+                                twoCount++;
                                 break;
                             }
                             case '3':{ var entry = $("<p id = 'three'></p>").text(num);
@@ -147,9 +194,21 @@
                     $("#projects").fadeIn( 2000 );
 
                     var countString = "|0:"+zeroCount+" 1:"+oneCount+" 2:"+twoCound+" 3:"+threeCount+" 4:"+fourCount+" 5:"+fiveCount+" 6:"+sixCount+" 7:"+sevenCount+" 8:"+eightCount+" 9:"+nineCount+"|";
-                    
-                    //$("#tester").text(countString);
                 });
+                //end make pie button
+
+                //hover over first 3
+                $("#projects").on("mouseover",'#three', function(){
+
+                    var occString = threeCount+" occurences";
+
+                    $("h1").text(occString);
+
+                    $(this).addClass('animate');
+                }).on("animationend", function(){
+                        $(this).removeClass('animate');
+                });
+                
             });
         </script>
         
@@ -172,6 +231,8 @@
                     <button id = btn3> Jump to Top</button>
 
                     <button id = btn4> Jump to Bottom</button>
+
+                    <h1>occurences </h1>
                 </div>
                 <h2 id = "thisIsPi"><strong>This is Pi</strong></h2>
             </div>

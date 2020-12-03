@@ -33,21 +33,25 @@ p {
     margin: 0;
 }
 
-h2{
+h2,h3 {
     text-align:center;
-    font-size: 100px;
-    margin-top: .1em;
-    margin-bottom: 0;
+    font-size: 6.25em;
     background: linear-gradient(to right,#005275,#00AFFB,#005275);
 }
 
+h2{
+    margin-top: .1em;
+    margin-bottom: 0;
+}
+
 h3{
-    text-align:center;
-    font-size: 100px;
     margin-top: 0;
     height: 1.45em;
     margin-bottom: -10em;
-    background: linear-gradient(to right,#005275,#00AFFB,#005275);
+}
+
+h1{
+    font-size: 1em;
 }
 
 label {
@@ -67,53 +71,69 @@ button {
     margin-right: 2em;
 }
 
-#nine,#eight,#seven,#six,#five,#four,#three,#two,#one,#zero,#dot{
-    font-size: 100px;
-}
-
 #last {
     justify-content: center;
 }
 
 #nine {
-    color: #800000;
+    background: linear-gradient(150deg, #800000,#ffffff);
 }
 
 #eight {
-    color: #e6194B;
+    background: linear-gradient(150deg, #e6194B,#ffffff);
 }
 
 #seven {
-    color: #9A6324;
+    background: linear-gradient(150deg, #9A6324,#ffffff);
 }
 
 #six {
-    color: #f58231;
+    background: linear-gradient(150deg,#f58231,#ffffff);
 }
 
 #five {
-    color: #808000;
+    background: linear-gradient(150deg,#808000,#ffffff);
 }
 
 #four {
-    color: #ffe119;
+    background: linear-gradient(150deg, #ffe119,#ffffff);
 }
 
 #three {
-    color: #bfef45;
+    background: linear-gradient(150deg,#bfef45,#ffffff);
 }
 
 #two {
-    color: #469990;
+    background: linear-gradient(150deg, #469990,#ffffff);
 }
 
 #one {
-    color: #4363d8;
+    background: linear-gradient(150deg,#4363d8,#ffffff);
 }
 
 #zero {
-    color: #911eb4;
+    background: linear-gradient(150deg, #911eb4,#ffffff);
 }
+
+
+#nine,#eight,#seven,#six,#five,#four,#three,#two,#one,#zero,#dot{
+    font-size: 7em;
+    background-size: 500% 500%;
+    
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.animate{
+    animation: AnimationPulseName 3s 1;
+}
+
+@keyframes AnimationPulseName {
+    0%{background-position:50% 0%}
+    50%{background-position:50% 100%}
+    100%{background-position:50% 0%}
+}
+
 
 #dot {
     font-size: 12em;
@@ -186,3 +206,4 @@ body::-webkit-scrollbar-track{
 body::-webkit-scrollbar-thumb{
     background:#005275;
 }
+
