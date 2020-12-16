@@ -101,17 +101,21 @@ strong {
     display: inline-block;
     padding: .5em 2.5em;
     background: var(--clr-accent);
+    color: var(--clr-light);
+    text-shadow: 1px 1px #000000;
+
     text-decoration: none;
     cursor: pointer;
-    font-size: .8rem;
+    font-size: 1rem;
     text-transform: uppercase;
-    letter-spacing: 2.px;
+    letter-spacing: 2px;
     font-weight: var(--fw-bold);
-    transition: transform 200ms ease-in-out;
+    transition: transform 500ms ease-in-out;
+    border-radius: 10px;
 }
 
 .btn:hover {
-    transform: scale(1.1);
+    transform: scale(1.4);
 }
 
 /* Typography */
@@ -177,7 +181,7 @@ header {
 .nav {
     position: fixed;
     background: rgb(0,175,240);
-    background: linear-gradient(90deg,rgba(9,9,121,1) 0%, rgba(0,175,240,1) 50%, rgba(9,9,121,1) 100%);
+    background: linear-gradient(90deg,rgba(0, 0, 0) 0%, rgba(0,175,240,1) 50%, rgb(0, 0, 0) 100%);
     color: var(--clr-light);
     top: 0;
     bottom: 0;
@@ -200,15 +204,23 @@ header {
     padding: 0;
 }
 
+.nav__item {
+    background-image: linear-gradient(45deg, yellow,#FE0000);
+    border-radius: 16px;
+    padding: 5px;
+}
+
 .nav__link {
     color: inherit;
     font-weight: var(--fw-bold);
     font-size: var(--fs-h2);
     text-decoration: none;
-    border: solid black 3px;
     transition: all 1s ease;
-    background: var(--clr-dark);
-    padding: 0 0.5em;
+
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
+    padding: 10px;
 }
 
 .nav__link:hover {
