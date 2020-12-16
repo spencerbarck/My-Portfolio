@@ -176,7 +176,8 @@ header {
 
 .nav {
     position: fixed;
-    background: var(--clr-dark);
+    background: rgb(0,175,240);
+    background: linear-gradient(90deg,rgba(9,9,121,1) 0%, rgba(0,175,240,1) 50%, rgba(9,9,121,1) 100%);
     color: var(--clr-light);
     top: 0;
     bottom: 0;
@@ -204,10 +205,15 @@ header {
     font-weight: var(--fw-bold);
     font-size: var(--fs-h2);
     text-decoration: none;
+    border: solid black 3px;
+    transition: all 1s ease;
+    background: var(--clr-dark);
+    padding: 0 0.5em;
 }
 
 .nav__link:hover {
     color: var(--clr-accent);
+    font-size: 8rem;
 }
 
 .nav-toggle {
@@ -379,6 +385,12 @@ header {
 
 .about-me__img {
     box-shadow: var(--bs);
+    transition: all 1s ease;
+    transform:skew(10deg, -10deg);
+}
+
+.about-me__img:hover {
+    transform:skew(0deg, 0deg);
 }
 
 @media (min-width: 600px) {
@@ -515,15 +527,38 @@ header {
     margin-left: auto;
     margin-right: auto;
     position: relative;
+    background: var(--clr-accent);
+    padding: 2em;
+    text-shadow: 1px 1px #000000;
+}
+.myworkimg{
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    background: var(--clr-accent);
+    padding: 2em;
+    border-radius: 15px;
 }
 
-.multiverse_link, .countdupe_link, .sameends_link, .calculator_link{
+.application_link{
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 50%;
     background-color: var(--clr-dark);
     border-style: solid;
+    text-align: center;
+    padding: 1em 0;
+    text-transform: uppercase;
+    opacity: 0.6;
+    font-weight: bold;
+    border-radius: 15px;
+    
+}
+
+.application_link:hover {
+    opacity: 1
 }
 
 .myworkimg {
